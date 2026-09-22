@@ -1,0 +1,1 @@
+{"schemaVersion":"0.1","videoId":"video-invalid","durationMs":30000,"annotationVersion":"human-v1","boundaries":[{"id":"a","timestampMs":20000,"confidence":"certain"},{"id":"b","timestampMs":10000,"confidence":"certain"}]}

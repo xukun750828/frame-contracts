@@ -1,0 +1,70 @@
+{
+  "$id": "https://frame.dev/schemas/scene-ground-truth-v0.1.schema.json",
+  "title": "FRAME Scene Ground Truth v0.1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "videoId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "durationMs": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991
+    },
+    "annotationVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "annotatorId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "boundaries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "timestampMs": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "certain",
+              "uncertain"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "timestampMs",
+          "confidence"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "videoId",
+    "durationMs",
+    "annotationVersion",
+    "boundaries"
+  ],
+  "additionalProperties": false
+}

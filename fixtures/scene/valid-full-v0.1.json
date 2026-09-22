@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "0.1",
+  "videoId": "video-full",
+  "durationMs": 30000,
+  "annotationVersion": "human-v1",
+  "annotatorId": "reviewer-01",
+  "boundaries": [
+    {"id":"gt-boundary-001","timestampMs":10000,"confidence":"certain","notes":"location change"},
+    {"id":"gt-boundary-002","timestampMs":20000,"confidence":"uncertain"}
+  ]
+}

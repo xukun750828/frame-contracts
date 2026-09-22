@@ -1,0 +1,1 @@
+export { FRAME_GROUND_TRUTH_SCHEMA_VERSION, SceneGroundTruthBoundaryConfidenceSchema, SceneGroundTruthBoundarySchema, SceneGroundTruthSchema, type SceneGroundTruthBoundaryConfidence, type SceneGroundTruthBoundary, type SceneGroundTruth } from "./ground-truth/scene.js";
